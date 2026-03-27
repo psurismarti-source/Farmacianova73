@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Salut i Vitalitat · Farmàcia Nova 73 La Garriga</title>
+  <meta name="description" content="Consells de salut, nutrició i vitalitat de l'equip de Farmàcia Nova 73 a La Garriga. Articles basats en evidència, sense màrqueting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== BLOG PAGE STYLES ===== */
+    .blog-hero {
+      background: linear-gradient(135deg, var(--color-primary-d) 0%, var(--color-primary) 60%, #2d7a2d 100%);
+      color: #fff;
+      padding: calc(var(--nav-h) + 3rem) 0 4rem;
+      text-align: center;
+    }
+    .blog-hero h1 { font-family: var(--font-display); font-size: clamp(2rem,5vw,3.25rem); font-weight:900; margin-bottom:.75rem; }
+    .blog-hero p { font-size:1.1rem; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+
+    /* ===== BLOG GRID ===== */
+    .blog-grid-section { background:var(--color-bg2); padding:var(--space-xl) 0; }
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:2rem; }
+
+    .blog-card {
+      background:var(--color-surface); border-radius:var(--radius-lg); overflow:hidden;
+      border:1px solid var(--color-border); box-shadow:var(--shadow-sm);
+      transition:transform .25s, box-shadow .25s; display:flex; flex-direction:column;
+    }
+    .blog-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .blog-card-img {
+      height:180px; display:flex; align-items:center; justify-content:center;
+      font-size:4.5rem; background:linear-gradient(135deg,var(--color-primary-l),#fff);
+    }
+    .blog-card-content { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+    .blog-cat {
+      display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.07em;
+      text-transform:uppercase; color:var(--color-primary); background:var(--color-primary-l);
+      padding:.2rem .65rem; border-radius:999px; margin-bottom:.75rem;
+    }
+    .blog-card-content h3 {
+      font-family:var(--font-display); font-size:1.15rem; font-weight:700;
+      color:var(--color-primary-d); margin-bottom:.6rem; line-height:1.35;
+    }
+    .blog-card-content p { font-size:.9rem; color:var(--color-text-m); line-height:1.65; flex:1; }
+    .blog-card-link {
+      display:inline-flex; align-items:center; gap:.3rem; margin-top:1.25rem;
+      font-weight:600; font-size:.9rem; color:var(--color-primary);
+      text-decoration:none; transition:color .2s;
+    }
+    .blog-card-link:hover { color:var(--color-primary-d); }
+
+    /* ===== ARTICLE STYLES ===== */
+    .article-section {
+      padding:var(--space-xl) 0; border-top:2px solid var(--color-border);
+    }
+    .article-section:nth-child(even) { background:var(--color-bg2); }
+    .article-inner { max-width:760px; margin:0 auto; }
+    .article-header { margin-bottom:2rem; }
+    .article-header .tag {
+      display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.07em;
+      text-transform:uppercase; color:var(--color-primary); background:var(--color-primary-l);
+      padding:.2rem .65rem; border-radius:999px; margin-bottom:.75rem;
+    }
+    .article-header h2 {
+      font-family:var(--font-display); font-size:clamp(1.6rem,4vw,2.25rem); font-weight:900;
+      color:var(--color-primary-d); line-height:1.25; margin-bottom:.75rem;
+    }
+    .article-header .intro {
+      font-size:1.1rem; color:var(--color-text-m); line-height:1.75; border-left:3px solid var(--color-primary);
+      padding-left:1.25rem; margin-left:0; background:var(--color-primary-l);
+      padding:.9rem 1.25rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .article-body { }
+    .article-body h3 {
+      font-family:var(--font-display); font-size:1.2rem; font-weight:700;
+      color:var(--color-primary-d); margin:1.75rem 0 .5rem;
+    }
+    .article-body p { color:var(--color-text-m); margin-bottom:1rem; line-height:1.8; }
+    .article-body ul { margin:.5rem 0 1rem 1.35rem; }
+    .article-body ul li { color:var(--color-text-m); margin-bottom:.4rem; line-height:1.7; font-size:.95rem; }
+    .article-body ul li::marker { color:var(--color-primary); }
+    .article-callout {
+      background:var(--color-primary-l); border-left:3px solid var(--color-primary);
+      border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+      padding:1rem 1.25rem; margin:1.5rem 0;
+    }
+    .article-callout p { color:var(--color-primary-d); font-weight:600; margin:0; font-size:.95rem; }
+    .article-cta-box {
+      background:linear-gradient(135deg,var(--color-primary),var(--color-primary-d));
+      border-radius:var(--radius-lg); padding:2rem; color:#fff; margin:2rem 0; text-align:center;
+    }
+    .article-cta-box h3 { font-family:var(--font-display); color:#fff; margin-bottom:.5rem; font-size:1.15rem; }
+    .article-cta-box p { color:rgba(255,255,255,.85); margin-bottom:1.25rem; font-size:.95rem; }
+    .article-author {
+      display:flex; align-items:center; gap:1rem;
+      background:var(--color-bg2); border-radius:var(--radius-md); padding:1.25rem; margin-top:2.5rem;
+    }
+    .author-avatar {
+      width:52px; height:52px; border-radius:50%;
+      background:linear-gradient(135deg,var(--color-primary-l),var(--color-primary));
+      display:flex; align-items:center; justify-content:center; font-size:1.5rem; flex-shrink:0;
+    }
+    .author-info strong { display:block; font-size:.95rem; color:var(--color-primary-d); }
+    .author-info span { font-size:.82rem; color:var(--color-text-m); }
+
+    /* Back to top */
+    .back-to-top {
+      display:inline-flex; align-items:center; gap:.35rem;
+      font-size:.85rem; color:var(--color-text-m); font-weight:600;
+      text-decoration:none; margin-bottom:1.5rem; transition:color .2s;
+    }
+    .back-to-top:hover { color:var(--color-primary); }
+
+    @media(max-width:640px) {
+      .blog-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+    <nav class="nav-container">
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text">
+          <span class="logo-name">Farmàcia Nova 73</span>
+          <span class="logo-tagline">La Garriga</span>
+        </div>
+      </a>
+
+      <!-- Spacer -->
+      <div class="nav-spacer"></div>
+
+      <!-- Desktop right: Contacte + CTA + Lang -->
+      <div class="nav-right">
+        <a href="contacte.html" class="nav-contacte-desktop nav-link">Contacte</a>
+        <a href="reservar.html" class="nav-cta">Reserva cita</a>
+        <div class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> <span style="margin:0 0.3rem;">CA</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/blog.html" class="lang-option active"><img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/blog.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/blog.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/blog.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</div>
+      </div>
+
+      <!-- Overlay menu (hamburger opens this) -->
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="sobre.html" class="nav-link" role="menuitem">Qui som</a></li>
+        <li><a href="serveis.html" class="nav-link" role="menuitem">Serveis 73</a></li>
+        <li><a href="blog.html" class="nav-link active" role="menuitem">Blog</a></li>
+        <li><a href="b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+        <!-- Mobile-only items (hidden on desktop via CSS) -->
+        <li><a href="contacte.html" class="nav-contacte-mobile" role="menuitem">Contacte</a></li>
+        <li><a href="reservar.html" class="nav-cta" role="menuitem">Reserva cita</a></li>
+        <li class="nav-menu-lang-wrap">
+          <li class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> <span style="margin:0 0.3rem;">CA</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/blog.html" class="lang-option active"><img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/blog.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/blog.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/blog.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</li>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="blog-hero" id="blog-top">
+      <div class="container">
+        <h1>Blog · Salut i Vitalitat</h1>
+        <p>Consells basats en evidència del nostre equip. Sense màrqueting, sense lletra petita.</p>
+      </div>
+    </section>
+
+    <!-- ===== BLOG GRID ===== -->
+    <section class="blog-grid-section">
+      <div class="container">
+        <div class="blog-grid">
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌿</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">✨ Pell i Bellesa</span>
+              <h3>Adéu a l'acne: El pla definitiu per una pell neta (per dins i per fora)</h3>
+              <p>L'acne no és un problema d'higiene, és un problema d'inflamació. Descobre el pla integral que funciona de veritat.</p>
+              <a href="blog/adeu-acne.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">❤️</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫀 Salut Cardiovascular</span>
+              <h3>Colesterol a ratlla: El teu cor t'ho agrairà</h3>
+              <p>El colesterol no és el dolent de la pel·lícula. Aprèn a entendre els teus nivells i com gestionar-los sense por.</p>
+              <a href="blog/colesterol-a-ratlla.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">👁️</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">👁️ Salut Ocular</span>
+              <h3>Conjuntivitis: Ulls vermells, guia ràpida per actuar bé</h3>
+              <p>Ulls vermells que piquen o que ploren? No és el mateix. Aprèn a identificar el tipus i actuar correctament.</p>
+              <a href="blog/conjuntivitis-guia-rapida.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🫀</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫁 Salut Hepàtica</span>
+              <h3>Fetge gras: El que ningú et diu sobre el teu fetge</h3>
+              <p>El fetge gras afecta 1 de cada 4 adults i la majoria no ho saben. Descobreix com revertir-ho amb nutrició.</p>
+              <a href="blog/fetge-gras.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">💊</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">📋 Farmàcia i Salut</span>
+              <h3>La recepta mèdica: La teva garantia de seguretat</h3>
+              <p>Per què necessites recepta per a certs medicaments? T'expliquem el sistema de prescripció de manera clara i senzilla.</p>
+              <a href="blog/recepta-medica.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌸</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🌸 Salut Femenina</span>
+              <h3>Menopausa: Un viatge de transformació (i com gaudir-ne)</h3>
+              <p>La menopausa no és una malaltia, és una nova etapa. Coneix el mapa hormonal i els millors aliats per a cada fase.</p>
+              <a href="blog/menopausa-viatge.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌿</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫁 Respiratori</span>
+              <h3>Tens tos? No totes les tosses són iguals: guia per alleujar-la</h3>
+              <p>Tos seca o amb mocs? L'abordatge és completament diferent. Et guiem per actuar bé i recuperar-te més ràpid.</p>
+              <a href="blog/tens-tos-guia.html" class="blog-card-link">Llegir l'article →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · Tots els drets reservats</p>
+        <div class="footer-legal">
+          <a href="privacitat.html">Privacitat</a>
+          <a href="index.html">← Inici</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34931352170?text=Hola!%20He%20llegit%20el%20blog%20i%20vull%20saber-ne%20m%C3%A9s%20sobre..." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="wa-tooltip">Escriu-nos!</span>
+  </a>
+
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite">
+    <div class="cookie-content">
+      <p><strong>🍪 Cookies</strong> — <a href="privacitat.html#cookies">Més info</a></p>
+      <div class="cookie-actions">
+        <button class="btn-ghost btn-small" id="cookie-reject">Essencials</button>
+        <button class="btn-primary btn-small" id="cookie-accept">Acceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services 73 · Farmàcia Nova 73 La Garriga</title>
+  <meta name="description" content="Services 73 : analyses rapides sans rendez-vous, analyses avec rendez-vous et conseil nutritionnel personnalisé.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="../assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text"><span class="logo-name">Farmàcia Nova 73</span><span class="logo-tagline">La Garriga</span></div>
+      </a>
+      <div class="nav-spacer"></div>
+      <div class="nav-right">
+        <a href="../contacte.html" class="nav-contacte-desktop nav-link">Contact</a>
+        <a href="../reservar.html" class="nav-cta">Réserver</a>
+        <div class="lang-dropdown-container">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false"><span style="font-size:1.2em;">🇫🇷</span> <span style="margin:0 0.3rem;">FR</span> <span style="font-size:0.7em;">▼</span></button>
+          <ul class="lang-menu">
+            <li><a href="/serveis.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+            <li><a href="/es/serveis.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+            <li><a href="/en/serveis.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+            <li><a href="/fr/serveis.html" class="lang-option active"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="../sobre.html" class="nav-link" role="menuitem">Qui sommes-nous</a></li>
+        <li><a href="serveis.html" class="nav-link active" role="menuitem">Services 73</a></li>
+        <li><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li><a href="../b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="serveis73-main">
+    <section class="serveis73-block serveis73-block--quick" id="analitiques">
+      <div class="container">
+        <div class="serveis73-block-header">
+          <div class="serveis73-badge-row"><span class="serveis73-badge serveis73-badge--green">Sans rendez-vous · Venez à jeun</span><span class="serveis73-wait">Temps d'attente : 5-10 min</span></div>
+          <h2 class="serveis73-block-title">ANALYSES RAPIDES</h2>
+        </div>
+      </div>
+    </section>
+    <section class="serveis73-block serveis73-block--appointment" id="serveis73-analitiques-cita">
+      <div class="container"><div class="serveis73-block-header"><div class="serveis73-badge-row"><span class="serveis73-badge serveis73-badge--amber">Avec rendez-vous</span></div><h2 class="serveis73-block-title">ANALYSES</h2></div></div>
+    </section>
+    <section class="serveis73-block serveis73-block--nutrition" id="nutricional">
+      <div class="container"><div class="serveis73-block-header"><div class="serveis73-badge-row"><span class="serveis73-badge serveis73-badge--green">Avec rendez-vous</span><span class="serveis73-nutrition-subtitle">Conseil personnalisé · <strong>Eli Fischer</strong></span></div><h2 class="serveis73-block-title">NUTRITION</h2></div></div>
+    </section>
+  </main>
+
+  <script src="../lang-detect.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>

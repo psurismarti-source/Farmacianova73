@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La recepta mèdica · Blog · Farmàcia Nova 73</title>
+  <meta name="description" content="La recepta mèdica és una garantia de seguretat: interaccions, antibiòtics, validesa i consells pràctics per evitar viatges innecessaris.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .hero{background:linear-gradient(135deg,var(--color-primary-d),var(--color-primary) 60%,rgba(232,160,32,.35));color:#fff;padding:calc(var(--nav-h) + 3rem) 0 3rem}
+    .hero .meta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;font-size:.82rem;color:rgba(255,255,255,.75);margin-bottom:1rem}
+    .hero h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.25rem);font-weight:900;line-height:1.12;margin-bottom:.75rem;max-width:860px}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:720px;line-height:1.7}
+    .body{padding:var(--space-xl) 0}
+    .inner{max-width:760px;margin:0 auto}
+    .inner h3{font-family:var(--font-display);color:var(--color-primary-d);font-size:1.2rem;margin:1.6rem 0 .5rem}
+    .inner p{color:var(--color-text-m);margin-bottom:1rem;line-height:1.85}
+    .inner ul{margin:.5rem 0 1rem 1.35rem}
+    .inner ul li{color:var(--color-text-m);margin-bottom:.4rem;line-height:1.7}
+    .callout{background:var(--color-primary-l);border-left:3px solid var(--color-primary);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem 1.25rem;margin:1.25rem 0}
+    .callout p{margin:0;color:var(--color-primary-d);font-weight:600}
+    .back{display:inline-flex;align-items:center;gap:.35rem;font-weight:700;color:var(--color-primary)}
+    .back:hover{color:var(--color-primary-d)}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="../index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="../assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text"><span class="logo-name">Farmàcia Nova 73</span><span class="logo-tagline">La Garriga</span></div>
+      </a>
+      <div class="nav-spacer"></div>
+      <div class="nav-right">
+        <a href="../contacte.html" class="nav-contacte-desktop nav-link">Contacte</a>
+        <a href="../reservar.html" class="nav-cta">Reserva cita</a>
+      </div>
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="../sobre.html" class="nav-link" role="menuitem">Qui som</a></li>
+        <li><a href="../serveis.html" class="nav-link" role="menuitem">Serveis 73</a></li>
+        <li><a href="../blog.html" class="nav-link active" role="menuitem">Blog</a></li>
+        <li><a href="../b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="meta"><span>📋 Farmàcia i Salut</span><span>·</span><span>Farmanova 73</span></div>
+        <h1>La recepta mèdica: Per què és la teva garantia de seguretat? 📝✅</h1>
+        <p>A la farmàcia, de vegades ens toca dir: “Em sap greu, però per aquest medicament necessito la recepta”. No ho fem per posar traves, sinó perquè la llei i la teva seguretat ens ho exigeixen. La recepta no és un simple paper; és el document sanitari que vincula el diagnòstic del metge amb la nostra dispensació.</p>
+      </div>
+    </section>
+
+    <section class="body">
+      <div class="container">
+        <div class="inner">
+          <a class="back" href="../blog.html">← Tornar al blog</a>
+
+          <h3>1. Per què és tan necessària? (Més enllà de la llei)</h3>
+          <ul>
+            <li><strong>Seguretat Clínica</strong>: Molts medicaments tenen efectes secundaris o interaccions. La recepta confirma que un metge ha valorat que aquell fàrmac és segur per a tu.</li>
+            <li><strong>Control de Resistències</strong>: Especialment amb els antibiòtics. Prendre’ls sense recepta crea “superbacteris” que fan que els medicaments deixin de funcionar quan realment els necessitem.</li>
+            <li><strong>Responsabilitat Professional</strong>: El farmacèutic és el darrer filtre de seguretat. Sense recepta, no tenim el marc legal per validar que la dosi i el tractament són els correctes per al teu cas.</li>
+          </ul>
+
+          <div class="callout">
+            <p>📌 Si tens dubtes de medicació, a la farmàcia t’ajudem a entendre dosi, durada i compatibilitats.</p>
+          </div>
+
+          <h3>2. Com ha de ser una recepta per ser vàlida? 🧐</h3>
+          <p>Perquè puguem acceptar una recepta (ja sigui en paper o digital), ha de complir uns requisits mínims que marca el Ministeri de Sanitat:</p>
+          <ul>
+            <li><strong>Dades del pacient</strong>: Nom, cognoms, l'any de naixement i DNI.</li>
+            <li><strong>Dades del medicament</strong>: Nom genèric o comercial, dosi (ex: 500mg), forma farmacèutica (ex: càpsules) i la durada del tractament.</li>
+            <li><strong>Dades del prescriptor (metge)</strong>: Nom, número de col·legiat i la seva signatura (manuscrita o digital).</li>
+            <li><strong>Data de prescripció</strong>: Recorda que les receptes tenen caducitat (normalment 10 dies per a antibiòtics i 3 mesos per a tractaments crònics des de la data d'emissió).</li>
+          </ul>
+
+          <h3>💡 Consells “Farmàcia 73” per estalviar-te viatges</h3>
+          <ul>
+            <li><strong>Recepta electrònica</strong>: Porta sempre la teva targeta sanitària actualitzada. És el mètode més segur i ràpid.</li>
+            <li><strong>Fotos al mòbil? Compte!</strong> Una foto de la recepta no és vàlida per dispensar medicaments amb recepta obligatòria. Necessitem el document original (paper o digital oficial).</li>
+            <li><strong>Privats</strong>: Si vas a un metge privat, assegura't que la recepta inclogui totes les dades del col·legiat i la signatura.</li>
+          </ul>
+
+          <div class="callout">
+            <p>🚀 Per fer aquest article “Top” a la teva reunió de divendres: escàner virtual d'una recepta, semàfor de medicaments i botó de descàrrega d'una guia ràpida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · Tots els drets reservats</p>
+        <div class="footer-legal">
+          <a href="../privacitat.html">Privacitat</a>
+          <a href="../blog.html">← Blog</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
+

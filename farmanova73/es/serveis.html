@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios 73 · Farmàcia Nova 73 La Garriga</title>
+  <meta name="description" content="Servicios 73: analíticas rápidas sin cita, analíticas con cita previa y consultoría de nutrición personalizada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="../assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text"><span class="logo-name">Farmàcia Nova 73</span><span class="logo-tagline">La Garriga</span></div>
+      </a>
+      <div class="nav-spacer"></div>
+      <div class="nav-right">
+        <a href="../contacte.html" class="nav-contacte-desktop nav-link">Contacto</a>
+        <a href="../reservar.html" class="nav-cta">Reservar cita</a>
+        <div class="lang-dropdown-container">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false"><span style="font-size:1.2em;">🇪🇸</span> <span style="margin:0 0.3rem;">ES</span> <span style="font-size:0.7em;">▼</span></button>
+          <ul class="lang-menu">
+            <li><a href="/serveis.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+            <li><a href="/es/serveis.html" class="lang-option active"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+            <li><a href="/en/serveis.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+            <li><a href="/fr/serveis.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="../sobre.html" class="nav-link" role="menuitem">Quiénes somos</a></li>
+        <li><a href="serveis.html" class="nav-link active" role="menuitem">Servicios 73</a></li>
+        <li><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li><a href="../b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="serveis73-main">
+    <section class="serveis73-block serveis73-block--quick" id="analitiques">
+      <div class="container">
+        <div class="serveis73-block-header">
+          <div class="serveis73-badge-row"><span class="serveis73-badge serveis73-badge--green">Sin cita · Ven en ayunas</span><span class="serveis73-wait">Tiempo de espera: 5-10 min</span></div>
+          <h2 class="serveis73-block-title">ANALÍTICAS RÁPIDAS</h2>
+        </div>
+        <div class="serveis73-cards-grid serveis73-cards-grid--quick">
+          <div class="serveis73-quick-card"><span class="serveis73-quick-icon">🩸</span><span class="serveis73-quick-name">Azúcar</span></div>
+          <div class="serveis73-quick-card"><span class="serveis73-quick-icon">🧬</span><span class="serveis73-quick-name">Colesterol</span></div>
+          <div class="serveis73-quick-card"><span class="serveis73-quick-icon">🧪</span><span class="serveis73-quick-name">Triglicéridos</span></div>
+          <div class="serveis73-quick-card"><span class="serveis73-quick-icon">📊</span><span class="serveis73-quick-name">Perfil Lipídico</span></div>
+          <div class="serveis73-quick-card"><span class="serveis73-quick-icon">🫀</span><span class="serveis73-quick-name">Tensión Arterial</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="serveis73-block serveis73-block--appointment" id="serveis73-analitiques-cita">
+      <div class="container">
+        <div class="serveis73-block-header">
+          <div class="serveis73-badge-row"><span class="serveis73-badge serveis73-badge--amber">Con cita previa</span></div>
+          <h2 class="serveis73-block-title">ANALÍTICAS</h2>
+        </div>
+        <div class="serveis73-cards-grid">
+          <a class="serveis73-service-card" href="proximament"><span class="serveis73-service-card-main"><span class="serveis73-service-icon">🧖</span><span class="serveis73-service-title">Tipo de Piel</span></span></a>
+          <a class="serveis73-service-card" href="proximament"><span class="serveis73-service-card-main"><span class="serveis73-service-icon">🧑‍⚕️</span><span class="serveis73-service-title">Cuero Cabelludo</span></span></a>
+          <a class="serveis73-service-card" href="proximament"><span class="serveis73-service-card-main"><span class="serveis73-service-icon">🌿</span><span class="serveis73-service-title">Test Intolerancia Alimentaria</span></span></a>
+          <div class="serveis73-service-card serveis73-service-card--coming"><span class="serveis73-coming-badge">Próximamente</span><span class="serveis73-service-card-main"><span class="serveis73-service-icon">✨</span><span class="serveis73-service-title">Quàntum</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="serveis73-block serveis73-block--nutrition" id="nutricional">
+      <div class="container">
+        <div class="serveis73-block-header">
+          <div class="serveis73-badge-row"><span class="serveis73-badge serveis73-badge--green">Con cita previa</span><span class="serveis73-nutrition-subtitle">Consultoría personalizada · <strong>Eli Fischer</strong></span></div>
+          <h2 class="serveis73-block-title">NUTRICIÓN</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../lang-detect.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>

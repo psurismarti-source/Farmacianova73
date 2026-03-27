@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Salud y Vitalidad · Farmacia Nova 73 La Garriga</title>
+  <meta name="description" content="Consejos de salud, nutrición y vitalidad del equipo de Farmacia Nova 73 en La Garriga. Artículos basados en evidencia, sin marketing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* ===== BLOG PAGE STYLES ===== */
+    .blog-hero {
+      background: linear-gradient(135deg, var(--color-primary-d) 0%, var(--color-primary) 60%, #2d7a2d 100%);
+      color: #fff;
+      padding: calc(var(--nav-h) + 3rem) 0 4rem;
+      text-align: center;
+    }
+    .blog-hero h1 { font-family: var(--font-display); font-size: clamp(2rem,5vw,3.25rem); font-weight:900; margin-bottom:.75rem; }
+    .blog-hero p { font-size:1.1rem; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+
+    /* ===== BLOG GRID ===== */
+    .blog-grid-section { background:var(--color-bg2); padding:var(--space-xl) 0; }
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:2rem; }
+
+    .blog-card {
+      background:var(--color-surface); border-radius:var(--radius-lg); overflow:hidden;
+      border:1px solid var(--color-border); box-shadow:var(--shadow-sm);
+      transition:transform .25s, box-shadow .25s; display:flex; flex-direction:column;
+    }
+    .blog-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .blog-card-img {
+      height:180px; display:flex; align-items:center; justify-content:center;
+      font-size:4.5rem; background:linear-gradient(135deg,var(--color-primary-l),#fff);
+    }
+    .blog-card-content { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+    .blog-cat {
+      display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.07em;
+      text-transform:uppercase; color:var(--color-primary); background:var(--color-primary-l);
+      padding:.2rem .65rem; border-radius:999px; margin-bottom:.75rem;
+    }
+    .blog-card-content h3 {
+      font-family:var(--font-display); font-size:1.15rem; font-weight:700;
+      color:var(--color-primary-d); margin-bottom:.6rem; line-height:1.35;
+    }
+    .blog-card-content p { font-size:.9rem; color:var(--color-text-m); line-height:1.65; flex:1; }
+    .blog-card-link {
+      display:inline-flex; align-items:center; gap:.3rem; margin-top:1.25rem;
+      font-weight:600; font-size:.9rem; color:var(--color-primary);
+      text-decoration:none; transition:color .2s;
+    }
+    .blog-card-link:hover { color:var(--color-primary-d); }
+
+    @media(max-width:640px) {
+      .blog-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="../index.html" class="logo" aria-label="Farmacia Nova 73">
+        <img src="../assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text">
+          <span class="logo-name">Farmàcia Nova 73</span>
+          <span class="logo-tagline">La Garriga</span>
+        </div>
+      </a>
+
+      <div class="nav-spacer"></div>
+
+      <div class="nav-right">
+        <a href="../contacte.html" class="nav-contacte-desktop nav-link">Contacto</a>
+        <a href="../reservar.html" class="nav-cta">Reservar cita</a>
+        <div class="lang-dropdown-container">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+            <span style="font-size:1.2em;">🇪🇸</span> <span style="margin:0 0.3rem;">ES</span> <span style="font-size:0.7em;">▼</span>
+          </button>
+          <ul class="lang-menu">
+            <li><a href="/blog.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+            <li><a href="/es/blog.html" class="lang-option active"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+            <li><a href="/en/blog.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+            <li><a href="/fr/blog.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="../sobre.html" class="nav-link" role="menuitem">Quiénes somos</a></li>
+        <li><a href="../serveis.html" class="nav-link" role="menuitem">Servicios 73</a></li>
+        <li><a href="blog.html" class="nav-link active" role="menuitem">Blog</a></li>
+        <li><a href="../b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+        <li><a href="../contacte.html" class="nav-contacte-mobile" role="menuitem">Contacto</a></li>
+        <li><a href="../reservar.html" class="nav-cta" role="menuitem">Reservar cita</a></li>
+        <li class="nav-menu-lang-wrap">
+          <li class="lang-dropdown-container">
+            <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+              <span style="font-size:1.2em;">🇪🇸</span> <span style="margin:0 0.3rem;">ES</span> <span style="font-size:0.7em;">▼</span>
+            </button>
+            <ul class="lang-menu">
+              <li><a href="/blog.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+              <li><a href="/es/blog.html" class="lang-option active"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+              <li><a href="/en/blog.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+              <li><a href="/fr/blog.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+            </ul>
+          </li>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-hero" id="blog-top">
+      <div class="container">
+        <h1>Blog · Salud y Vitalidad</h1>
+        <p>Consejos basados en evidencia de nuestro equipo. Sin marketing, sin letra pequeña.</p>
+      </div>
+    </section>
+
+    <section class="blog-grid-section">
+      <div class="container">
+        <div class="blog-grid">
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌿</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">✨ Piel y Belleza</span>
+              <h3>Adiós al acné: el plan definitivo para una piel limpia (por dentro y por fuera)</h3>
+              <p>El acné no es un problema de higiene: es inflamación. Descubre un protocolo integral que funciona de verdad.</p>
+              <a href="blog/adeu-acne.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">❤️</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫀 Salud Cardiovascular</span>
+              <h3>Colesterol a raya: tu corazón te lo agradecerá</h3>
+              <p>El colesterol no es el malo de la película. Aprende a entender tus valores y a gestionarlos sin miedo.</p>
+              <a href="blog/colesterol-a-ratlla.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">👁️</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">👁️ Salud Ocular</span>
+              <h3>Conjuntivitis: ojos rojos, guía rápida para actuar bien</h3>
+              <p>¿Ojos rojos que pican o que lloran? No es lo mismo. Aprende a identificar el tipo y actuar correctamente.</p>
+              <a href="blog/conjuntivitis-guia-rapida.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🫀</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫁 Salud Hepática</span>
+              <h3>Hígado graso: lo que nadie te cuenta sobre tu hígado</h3>
+              <p>El hígado graso afecta a 1 de cada 4 adultos y la mayoría no lo sabe. Descubre cómo cuidarlo con hábitos.</p>
+              <a href="blog/fetge-gras.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">💊</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">📋 Farmacia y Salud</span>
+              <h3>La receta médica: tu garantía de seguridad</h3>
+              <p>¿Por qué necesitas receta para ciertos medicamentos? Te lo explicamos de forma clara y sencilla.</p>
+              <a href="blog/recepta-medica.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌸</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🌸 Salud Femenina</span>
+              <h3>Menopausia: un viaje de transformación (y cómo disfrutarlo)</h3>
+              <p>La menopausia no es una enfermedad: es una etapa. Conoce aliados y hábitos para cada fase.</p>
+              <a href="blog/menopausa-viatge.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌿</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫁 Respiratorio</span>
+              <h3>¿Tienes tos? No todas son iguales: guía para aliviarla</h3>
+              <p>¿Tos seca o con mocos? El enfoque es distinto. Te guiamos para actuar bien y recuperarte antes.</p>
+              <a href="blog/tens-tos-guia.html" class="blog-card-link">Leer el artículo →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · Todos los derechos reservados</p>
+        <div class="footer-legal">
+          <a href="../privacitat.html">Privacidad</a>
+          <a href="../index.html">← Inicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B · Farmàcia Nova 73 per a Empreses i Gimnàs | La Garriga</title>
+  <meta name="description" content="Farmàcia Nova 73 ofereix serveis B2B a empreses i gimnàs de La Garriga: farmacialoa, convenis de salut, tallers de nutrició i suplementació.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .b2b-service-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: transform var(--trans-med), box-shadow var(--trans-med);
+    }
+    .b2b-service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .b2b-service-num {
+      font-family: var(--font-mono);
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: var(--color-primary-l);
+      display: block;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .b2b-service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-primary-d);
+      margin-bottom: 0.75rem;
+    }
+    .b2b-service-card p { color: var(--color-text-m); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.65; }
+    .b2b-service-features { display: flex; flex-direction: column; gap: 0.3rem; }
+    .b2b-service-features li {
+      font-size: 0.88rem;
+      color: var(--color-text-m);
+      display: flex; align-items: flex-start; gap: 0.4rem;
+    }
+    .b2b-service-features li::before { content: '→'; color: var(--color-primary); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .b2b-cta-section {
+      background: linear-gradient(135deg, var(--color-primary-d) 0%, #0d3a1e 100%);
+      padding: var(--space-lg) 0;
+      text-align: center;
+      color: #fff;
+    }
+    .b2b-cta-section h2 { font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 900; margin-bottom: 1rem; }
+    .b2b-cta-section p { color: rgba(255,255,255,.75); font-size: 1.1rem; margin-bottom: 2rem; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .b2b-form-section { background: var(--color-bg2); padding: var(--space-xl) 0; }
+    .b2b-form-wrap {
+      max-width: 720px; margin: 0 auto;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+    }
+    .b2b-form-wrap h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--color-primary-d); margin-bottom: 0.5rem; }
+    .checklist-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .checklist-group label { font-size: 0.88rem; font-weight: 500; }
+    .b2b-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin: var(--space-lg) 0; }
+    .stat-item { text-align: center; background: var(--color-surface); border-radius: var(--radius-md); padding: 1.5rem 1rem; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border); }
+    .stat-num { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--color-primary); }
+    .stat-label { font-size: 0.82rem; color: var(--color-text-m); }
+  </style>
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+    <nav class="nav-container">
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text">
+          <span class="logo-name">Farmàcia Nova 73</span>
+          <span class="logo-tagline">La Garriga</span>
+        </div>
+      </a>
+
+      <!-- Spacer -->
+      <div class="nav-spacer"></div>
+
+      <!-- Desktop right: Contacte + CTA + Lang -->
+      <div class="nav-right">
+        <a href="contacte.html" class="nav-contacte-desktop nav-link">Contacte</a>
+        <a href="reservar.html" class="nav-cta">Reserva cita</a>
+        <div class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> <span style="margin:0 0.3rem;">CA</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/b2b.html" class="lang-option active"><img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/b2b.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/b2b.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/b2b.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</div>
+      </div>
+
+      <!-- Overlay menu (hamburger opens this) -->
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="sobre.html" class="nav-link" role="menuitem">Qui som</a></li>
+        <li><a href="serveis.html" class="nav-link" role="menuitem">Serveis 73</a></li>
+        <li><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li><a href="b2b.html" class="nav-link active" role="menuitem">B2B</a></li>
+        <!-- Mobile-only items (hidden on desktop via CSS) -->
+        <li><a href="contacte.html" class="nav-contacte-mobile" role="menuitem">Contacte</a></li>
+        <li><a href="reservar.html" class="nav-cta" role="menuitem">Reserva cita</a></li>
+        <li class="nav-menu-lang-wrap">
+          <li class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> <span style="margin:0 0.3rem;">CA</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/b2b.html" class="lang-option active"><img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/b2b.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/b2b.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/b2b.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</li>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(232,160,32,.25);border:1px solid rgba(232,160,32,.4);color:var(--color-accent);font-size:.82rem;font-weight:700;padding:.3rem .85rem;border-radius:999px;margin-bottom:1rem;">🏢 Serveis B2B</div>
+        <h1>El motor de la teva organització<br><em>som nosaltres</em></h1>
+        <p>Solucions de salut corporativa per a empreses i gimnàs de La Garriga i el Vallès Oriental.</p>
+      </div>
+    </section>
+
+    <!-- INTRO STATS -->
+    <section style="background:var(--color-bg);padding:var(--space-xl) 0 var(--space-lg);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Per què el 73 per a la teva empresa?</h2>
+          <p class="section-sub">Perquè un equip sa rend més. I a La Garriga ho sabem.</p>
+        </div>
+        <div class="b2b-stats">
+          <div class="stat-item">
+            <span class="stat-num">+30%</span>
+            <span class="stat-label">Productivitat amb bons hàbits de salut</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">−23%</span>
+            <span class="stat-label">Absentisme laboral amb prevenció activa</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Farmacialoa legals</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Empreses locals que confien en el 73</span>
+          </div>
+        </div>
+
+        <!-- 3 SERVEIS B2B -->
+        <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:var(--space-lg);">
+          <div class="b2b-service-card animate-in">
+            <span class="b2b-service-num">01</span>
+            <h3>🧰 Farmacialoa d'Empresa</h3>
+            <p>Complir la normativa de seguretat laboral (RD 486/1997) no ha de ser un maldecap. Ens encarreguem de subministrar, revisar i renovar la farmacialoa de la teva empresa. Tu t'oblides, nosaltres ho tenim controlat.</p>
+            <ul class="b2b-service-features">
+              <li>Auditoria inicial del material existent (gratuïta)</li>
+              <li>Subministrament adaptat a la mida de l'equip</li>
+              <li>Revisió periòdica i renovació de caducitats</li>
+              <li>Certificat de conformitat per a inspeccions</li>
+              <li>Atenció d'urgència en cas de necessitat</li>
+            </ul>
+          </div>
+
+          <div class="b2b-service-card animate-in">
+            <span class="b2b-service-num">02</span>
+            <h3>👥 Convenis de Salut per als teus Empleats</h3>
+            <p>Ofereix als teus empleats accés prioritari als nostres serveis de salut. Una manera efectiva d'afegir valor al teu paquet de beneficis laborals i fidelitzar el talent.</p>
+            <ul class="b2b-service-features">
+              <li>Accés prioritari a serveis seleccionats</li>
+              <li>Consultes nutricionals a preu preferent</li>
+              <li>SPD personalitzat per a empleats amb polimedicació</li>
+              <li>Suplementació esportiva per a equips actius</li>
+              <li>Seguiment col·lectiu de paràmetres de salut (sota contracte)</li>
+            </ul>
+          </div>
+
+          <div class="b2b-service-card animate-in">
+            <span class="b2b-service-num">03</span>
+            <h3>🎤 Tallers de Nutrició i Benestar</h3>
+            <p>Sessions formatives presencials o online sobre nutrició, gestió de l'energia, hidratació i hàbits saludables. Per a empreses que volen que el seu equip rendeixi al 100% i per a gimnàs que volen oferir valor als seus socis.</p>
+            <ul class="b2b-service-features">
+              <li>"Nutrició per rendir: com menjar per treballar millor"</li>
+              <li>"Suplementació esportiva: veritat vs màrqueting"</li>
+              <li>"El cos a punt: analítiques que tothom hauria de fer"</li>
+              <li>"Gestió de l'estrès oxidatiu i la recuperació"</li>
+              <li>Sessions personalitzades a mida del sector</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="b2b-cta-section">
+      <div class="container">
+        <h2>Vols que el teu equip rendeixi al 100%?</h2>
+        <a href="#b2b-formulari" class="btn-primary btn-large">Sol·licita una proposta gratuïta →</a>
+      </div>
+    </section>
+
+    <!-- FORMULARI B2B -->
+    <section class="b2b-form-section" id="b2b-formulari">
+      <div class="container">
+        <div class="b2b-form-wrap page-fade">
+          <h2>Contacte B2B</h2>
+          <p style="color:var(--color-text-m);font-size:.9rem;margin-bottom:1.5rem;">Omple el formulari i un membre del nostre equip es posarà en contacte en menys de 24h laborables.</p>
+
+          <form class="b2b-form" id="b2b-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b2b-empresa">Nom de l'empresa / entitat *</label>
+                <input type="text" id="b2b-empresa" name="empresa" placeholder="La Meva Empresa SL" required autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="b2b-sector">Sector *</label>
+                <select id="b2b-sector" name="sector" required>
+                  <option value="" disabled selected>— Sector —</option>
+                  <option value="gimnàs">🏋️ Gimnàs / Fitness</option>
+                  <option value="pimes">🏢 PIME local</option>
+                  <option value="industria">🔧 Indústria / Manufactura</option>
+                  <option value="comerc">🛒 Comerç / Retail</option>
+                  <option value="educacio">📚 Educació</option>
+                  <option value="salut">🏥 Salut / Social</option>
+                  <option value="altres">Altres</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b2b-persones">Nombre de persones *</label>
+                <select id="b2b-persones" name="persones" required>
+                  <option value="" disabled selected>— Tamany —</option>
+                  <option value="1-5">1–5 persones</option>
+                  <option value="6-20">6–20 persones</option>
+                  <option value="21-50">21–50 persones</option>
+                  <option value="51-100">51–100 persones</option>
+                  <option value="100+">Més de 100</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b2b-contacte">Persona de contacte *</label>
+                <input type="text" id="b2b-contacte" name="contacte" placeholder="Nom i cognom" required autocomplete="name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b2b-tel">Telèfon *</label>
+                <input type="tel" id="b2b-tel" name="telefon" placeholder="Ej: 600 000 000" required autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="b2b-email">Email de contacte *</label>
+                <input type="email" id="b2b-email" name="email" placeholder="contacte@empresa.cat" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Serveis d'interès (selecciona tots els que vulguis)</label>
+              <div class="checklist-group" style="margin-top:.4rem;">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interes" value="botiquins">
+                  <span>🧰 Farmacialoa i manteniment</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interes" value="conveni">
+                  <span>👥 Conveni de salut per a empleats</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interes" value="tallers">
+                  <span>🎤 Tallers de nutrició i benestar</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interes" value="suplementacio">
+                  <span>💪 Suplementació esportiva (gimnàs)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interes" value="analitiques">
+                  <span>🔬 Analítiques corporatives</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="b2b-msg">Explica'ns el vostre repte</label>
+              <textarea id="b2b-msg" name="missatge" placeholder="Ex: Som un gimnàs de 200 socis i volem oferir tallers de nutrició esportiva mensuals..."></textarea>
+            </div>
+
+            <div class="form-consent">
+              <label class="checkbox-label">
+                <input type="checkbox" name="privacitat" required>
+                <span>Accepto la <a href="privacitat.html" target="_blank">política de privacitat</a> de Farmàcia Nova 73. Les dades facilitades s'usaran únicament per a gestionar la sol·licitud B2B. *</span>
+              </label>
+            </div>
+
+            <p class="rgpd-micro">
+              Responsable: Farmàcia Nova 73 · Ctra. Nova 73, 08530 La Garriga. Finalitat: gestionar la sol·licitud B2B. Base legal: consentiment. Destinataris: no se cediran dades a tercers. Drets: accés, rectificació, supressió i altres drets a <a href="mailto:farmanova@farmanova73.cat">farmanova@farmanova73.cat</a>.
+            </p>
+
+            <button type="submit" class="btn-primary">
+              <span class="btn-icon">🚀</span>
+              Enviar sol·licitud B2B
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · Tots els drets reservats</p>
+        <div class="footer-legal">
+          <a href="privacitat.html">Privacitat</a>
+          <a href="index.html">← Inici</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34931352170?text=Hola!%20Vull%20informaci%C3%B3%20sobre%20els%20vostres%20serveis%20B2B%20per%20a%20empreses."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp B2B">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="wa-tooltip">B2B WhatsApp</span>
+  </a>
+
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite">
+    <div class="cookie-content">
+      <p><strong>🍪 Cookies</strong> — <a href="privacitat.html#cookies">Més info</a></p>
+      <div class="cookie-actions">
+        <button class="btn-ghost btn-small" id="cookie-reject">Essencials</button>
+        <button class="btn-primary btn-small" id="cookie-accept">Acceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

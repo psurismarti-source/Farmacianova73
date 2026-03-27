@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Booking · Farmàcia Nova 73 La Garriga</title>
+  <meta name="description"
+    content="Book an appointment at Farmàcia Nova 73 La Garriga. Analytics, nutrition, personalised SPD. Ctra. Nova 73.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" id="site-header">
+    <nav class="nav-container">
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="../index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="../assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text">
+          <span class="logo-name">Farmàcia Nova 73</span>
+          <span class="logo-tagline">La Garriga</span>
+        </div>
+      </a>
+
+      <!-- Spacer -->
+      <div class="nav-spacer"></div>
+
+      <!-- Desktop right: Contacte + CTA + Lang -->
+      <div class="nav-right">
+        <a href="../contacte.html" class="nav-contacte-desktop nav-link">Contact</a>
+        <a href="../reservar.html" class="nav-cta">Book appointment</a>
+        <div class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <span style="font-size:1.2em;">🇬🇧</span> <span style="margin:0 0.3rem;">EN</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/reservar.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/reservar.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/reservar.html" class="lang-option active"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/reservar.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</div>
+      </div>
+
+      <!-- Overlay menu (hamburger opens this) -->
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="../sobre.html" class="nav-link" role="menuitem">About us</a></li>
+        <li><a href="../serveis.html" class="nav-link" role="menuitem">Services 73</a></li>
+        <li><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li><a href="../b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+        <!-- Mobile-only items (hidden on desktop via CSS) -->
+        <li><a href="../contacte.html" class="nav-contacte-mobile" role="menuitem">Contact</a></li>
+        <li><a href="../reservar.html" class="nav-cta" role="menuitem">Book appointment</a></li>
+        <li class="nav-menu-lang-wrap">
+          <li class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <span style="font-size:1.2em;">🇬🇧</span> <span style="margin:0 0.3rem;">EN</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/reservar.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/reservar.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/reservar.html" class="lang-option active"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/reservar.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</li>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Book your appointment</h1>
+        <p>Choose the service, the date and come tune your engine. We are here for you.</p>
+      </div>
+    </section>
+
+    <section class="page-content" id="reserva">
+      <div class="container">
+        <div style="max-width:640px;margin:0 auto;">
+
+          <!-- FORMULARI RESERVA -->
+          <div class="contact-form-wrap page-fade" style="background:var(--color-surface);padding:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--color-border);">
+            <h2>🗓 Book your appointment</h2>
+            <p style="color:var(--color-text-m);font-size:.9rem;margin-bottom:1.5rem;">
+              Fill in the form and we'll contact you to confirm the time. Guaranteed response within 24h.
+            </p>
+
+            <!-- reCAPTCHA v3 placeholder -->
+            <!-- <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script> -->
+
+            <form class="reserva-form" id="reserva-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="res-nom">Full name *</label>
+                  <input type="text" id="res-nom" name="nom" placeholder="Anna Garcia" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="res-tel">Phone *</label>
+                  <input type="tel" id="res-tel" name="telefon" placeholder="E.g.: 600 000 000" required autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reserva-servei">Desired service *</label>
+                <select id="reserva-servei" name="servei" required>
+                  <option value="" disabled selected>— Select a service —</option>
+                  <option value="analitiques">🔬 Rapid Analytics</option>
+                  <option value="nutricional">🥗 Nutritional Consulting</option>
+                  <option value="spd">💊 Personalised SPD</option>
+                  <option value="motor-energia">🔋 Engine &amp; Energy</option>
+                  <option value="equilibri">🌸 Balance &amp; Maturity</option>
+                  <option value="primers-passos">🐣 First Steps</option>
+                  <option value="seguiment">🤝 Follow-up &amp; Trust</option>
+                  <option value="altra">Other consultation</option>
+                </select>
+              </div>
+
+              <div class="datetime-group">
+                <div class="form-group">
+                  <label for="res-data">Preferred date *</label>
+                  <input type="date" id="res-data" name="data" required min="" /* JS sets today * />
+                </div>
+                <div class="form-group">
+                  <label for="res-hora">Preferred time *</label>
+                  <select id="res-hora" name="hora" required>
+                    <option value="" disabled selected>— Time —</option>
+                    <option value="09:00">09:00h</option>
+                    <option value="09:30">09:30h</option>
+                    <option value="10:00">10:00h</option>
+                    <option value="10:30">10:30h</option>
+                    <option value="11:00">11:00h</option>
+                    <option value="11:30">11:30h</option>
+                    <option value="12:00">12:00h</option>
+                    <option value="12:30">12:30h</option>
+                    <option value="17:00">17:00h</option>
+                    <option value="17:30">17:30h</option>
+                    <option value="18:00">18:00h</option>
+                    <option value="18:30">18:30h</option>
+                    <option value="19:00">19:00h</option>
+                    <option value="19:30">19:30h</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="res-notes">Tell us briefly about your case (optional)</label>
+                <textarea id="res-notes" name="notes"
+                  placeholder="E.g.: I'd like a basic blood test, I haven't had a check-up in 2 years..."></textarea>
+              </div>
+
+              <div class="form-consent">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="privacitat" required>
+                  <span>I have read and accept the <a href="privacitat.html" target="_blank">privacy policy</a>. My
+                    data will be used to manage the booking. *</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter">
+                  <span>I subscribe to the monthly newsletter from 73 (health tips, news). Optional.</span>
+                </label>
+              </div>
+
+              <p class="rgpd-micro">
+                Controller: Farmàcia Nova 73 · Ctra. Nova 73, 08530 La Garriga. Purpose: manage your booking and,
+                if accepted, send communications. Legal basis: consent. Rights: access, rectification and deletion
+                by emailing <a href="mailto:farmanova@farmanova73.cat">farmanova@farmanova73.cat</a>. You can revoke
+                consent at any time.
+              </p>
+
+              <button type="submit" class="btn-primary">
+                <span class="btn-icon">📅</span>
+                Book my appointment
+              </button>
+            </form>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · All rights reserved</p>
+        <div class="footer-legal">
+          <a href="privacitat.html">Privacy</a>
+          <a href="privacitat.html#cookies">Cookies</a>
+          <a href="index.html">← Back to home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34931352170?text=Hola!%20Vull%20posar%20el%20meu%20motor%20en%20solfa%2C%20em%20podeu%20ajudar%20amb...%3F"
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+    <span class="wa-tooltip">Write to us!</span>
+  </a>
+
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite">
+    <div class="cookie-content">
+      <p><strong>🍪 Cookies</strong> — We use cookies to improve your experience. <a
+          href="privacitat.html#cookies">Més info</a></p>
+      <div class="cookie-actions">
+        <button class="btn-ghost btn-small" id="cookie-reject">Essential</button>
+        <button class="btn-primary btn-small" id="cookie-accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../main.js"></script>
+  <script>
+    // Set min date to today
+    const dateInput = document.getElementById('res-data');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.min = today;
+      // Skip weekends in UX hint (not blocking)
+    }
+  </script>
+</body>
+
+</html>

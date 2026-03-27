@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health & Vitality Blog · Farmàcia Nova 73 La Garriga</title>
+  <meta name="description" content="Health, nutrition and vitality tips from Farmàcia Nova 73 in La Garriga. Evidence-based articles, no marketing fluff.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .blog-hero {
+      background: linear-gradient(135deg, var(--color-primary-d) 0%, var(--color-primary) 60%, #2d7a2d 100%);
+      color: #fff;
+      padding: calc(var(--nav-h) + 3rem) 0 4rem;
+      text-align: center;
+    }
+    .blog-hero h1 { font-family: var(--font-display); font-size: clamp(2rem,5vw,3.25rem); font-weight:900; margin-bottom:.75rem; }
+    .blog-hero p { font-size:1.1rem; color:rgba(255,255,255,.85); max-width:600px; margin:0 auto; }
+
+    .blog-grid-section { background:var(--color-bg2); padding:var(--space-xl) 0; }
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:2rem; }
+    .blog-card {
+      background:var(--color-surface); border-radius:var(--radius-lg); overflow:hidden;
+      border:1px solid var(--color-border); box-shadow:var(--shadow-sm);
+      transition:transform .25s, box-shadow .25s; display:flex; flex-direction:column;
+    }
+    .blog-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .blog-card-img {
+      height:180px; display:flex; align-items:center; justify-content:center;
+      font-size:4.5rem; background:linear-gradient(135deg,var(--color-primary-l),#fff);
+    }
+    .blog-card-content { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+    .blog-cat {
+      display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.07em;
+      text-transform:uppercase; color:var(--color-primary); background:var(--color-primary-l);
+      padding:.2rem .65rem; border-radius:999px; margin-bottom:.75rem;
+    }
+    .blog-card-content h3 {
+      font-family:var(--font-display); font-size:1.15rem; font-weight:700;
+      color:var(--color-primary-d); margin-bottom:.6rem; line-height:1.35;
+    }
+    .blog-card-content p { font-size:.9rem; color:var(--color-text-m); line-height:1.65; flex:1; }
+    .blog-card-link {
+      display:inline-flex; align-items:center; gap:.3rem; margin-top:1.25rem;
+      font-weight:600; font-size:.9rem; color:var(--color-primary);
+      text-decoration:none; transition:color .2s;
+    }
+    .blog-card-link:hover { color:var(--color-primary-d); }
+    @media(max-width:640px) { .blog-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="../index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="../assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text"><span class="logo-name">Farmàcia Nova 73</span><span class="logo-tagline">La Garriga</span></div>
+      </a>
+      <div class="nav-spacer"></div>
+      <div class="nav-right">
+        <a href="../contacte.html" class="nav-contacte-desktop nav-link">Contact</a>
+        <a href="../reservar.html" class="nav-cta">Book an appointment</a>
+        <div class="lang-dropdown-container">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+            <span style="font-size:1.2em;">🇬🇧</span> <span style="margin:0 0.3rem;">EN</span> <span style="font-size:0.7em;">▼</span>
+          </button>
+          <ul class="lang-menu">
+            <li><a href="/blog.html" class="lang-option"><img src="../assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+            <li><a href="/es/blog.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+            <li><a href="/en/blog.html" class="lang-option active"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+            <li><a href="/fr/blog.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="../sobre.html" class="nav-link" role="menuitem">About</a></li>
+        <li><a href="../serveis.html" class="nav-link" role="menuitem">Services 73</a></li>
+        <li><a href="blog.html" class="nav-link active" role="menuitem">Blog</a></li>
+        <li><a href="../b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+        <li><a href="../contacte.html" class="nav-contacte-mobile" role="menuitem">Contact</a></li>
+        <li><a href="../reservar.html" class="nav-cta" role="menuitem">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-hero" id="blog-top">
+      <div class="container">
+        <h1>Blog · Health & Vitality</h1>
+        <p>Evidence-based tips from our team. No marketing, no fine print.</p>
+      </div>
+    </section>
+
+    <section class="blog-grid-section">
+      <div class="container">
+        <div class="blog-grid">
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌿</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">✨ Skin & Beauty</span>
+              <h3>Goodbye acne: the ultimate plan for clear skin (inside and out)</h3>
+              <p>Acne isn’t a hygiene issue — it’s inflammation. Discover an integral protocol that actually works.</p>
+              <a href="blog/adeu-acne.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">❤️</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫀 Cardiovascular Health</span>
+              <h3>Keep cholesterol in check: your heart will thank you</h3>
+              <p>Cholesterol isn’t the villain. Learn what your numbers mean and how to improve them without fear.</p>
+              <a href="blog/colesterol-a-ratlla.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">👁️</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">👁️ Eye Health</span>
+              <h3>Conjunctivitis: red eyes, a quick guide to doing the right thing</h3>
+              <p>Itchy or watery red eyes? Not the same. Learn to identify the type and act correctly.</p>
+              <a href="blog/conjuntivitis-guia-rapida.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🫀</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫁 Liver Health</span>
+              <h3>Fatty liver: what nobody tells you about your liver</h3>
+              <p>Fatty liver affects many adults and often goes unnoticed. Learn how to support it with real habits.</p>
+              <a href="blog/fetge-gras.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">💊</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">📋 Pharmacy & Health</span>
+              <h3>Medical prescriptions: your safety guarantee</h3>
+              <p>Why do some medicines require a prescription? We explain it clearly and simply.</p>
+              <a href="blog/recepta-medica.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌸</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🌸 Women’s Health</span>
+              <h3>Menopause: a transformation journey (and how to enjoy it)</h3>
+              <p>Menopause isn’t a disease — it’s a stage. Learn allies and habits for each phase.</p>
+              <a href="blog/menopausa-viatge.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+
+          <article class="blog-card animate-in">
+            <div class="blog-card-img">🌿</div>
+            <div class="blog-card-content">
+              <span class="blog-cat">🫁 Respiratory</span>
+              <h3>Coughing? Not all coughs are the same: a relief guide</h3>
+              <p>Dry cough or with mucus? The approach is different. We guide you to act well and recover faster.</p>
+              <a href="blog/tens-tos-guia.html" class="blog-card-link">Read the article →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · All rights reserved</p>
+        <div class="footer-legal">
+          <a href="../privacitat.html">Privacy</a>
+          <a href="../index.html">← Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

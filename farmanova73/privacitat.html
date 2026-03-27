@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacitat · Farmàcia Nova 73 La Garriga</title>
+  <meta name="description" content="Política de privacitat i protecció de dades de Farmàcia Nova 73 (farmanova73.cat), conforme al RGPD i la LOPDGDD.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-body { max-width: 780px; margin: 0 auto; padding: var(--space-xl) 0; }
+    .legal-body h2 { font-family: var(--font-display); font-size: 1.35rem; color: var(--color-primary-d); margin: 2rem 0 0.75rem; }
+    .legal-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-primary-d); margin: 1.25rem 0 0.4rem; }
+    .legal-body p { color: var(--color-text-m); margin-bottom: 0.85rem; line-height: 1.75; font-size: 0.95rem; }
+    .legal-body ul { margin: 0.5rem 0 1rem 1.25rem; }
+    .legal-body ul li { color: var(--color-text-m); font-size: 0.93rem; margin-bottom: 0.35rem; line-height: 1.65; }
+    .legal-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.88rem; }
+    .legal-body table th { background: var(--color-primary-l); color: var(--color-primary-d); font-weight: 600; padding: 0.6rem 0.85rem; text-align: left; border: 1px solid var(--color-border); }
+    .legal-body table td { padding: 0.5rem 0.85rem; border: 1px solid var(--color-border); color: var(--color-text-m); vertical-align: top; }
+    .legal-body table tr:nth-child(even) td { background: var(--color-bg2); }
+    .legal-update { background: var(--color-accent-l); border-radius: var(--radius-sm); padding: 0.6rem 1rem; font-size: 0.82rem; color: var(--color-accent-d); margin-bottom: 1.5rem; }
+    .legal-toc { background: var(--color-bg2); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2rem; }
+    .legal-toc h3 { margin-top: 0; }
+    .legal-toc ol { margin-left: 1.25rem; }
+    .legal-toc ol li { margin-bottom: 0.3rem; }
+    .legal-toc a { color: var(--color-primary); font-size: 0.9rem; }
+    .legal-toc a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+    <nav class="nav-container">
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Farmàcia Nova 73">
+        <img src="assets/logo-icon.png" alt="Logo" class="logo-icon-img">
+        <div class="logo-text">
+          <span class="logo-name">Farmàcia Nova 73</span>
+          <span class="logo-tagline">La Garriga</span>
+        </div>
+      </a>
+
+      <!-- Spacer -->
+      <div class="nav-spacer"></div>
+
+      <!-- Desktop right: Contacte + CTA + Lang -->
+      <div class="nav-right">
+        <a href="contacte.html" class="nav-contacte-desktop nav-link">Contacte</a>
+        <a href="reservar.html" class="nav-cta">Reserva cita</a>
+        <div class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> <span style="margin:0 0.3rem;">CA</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/privacitat.html" class="lang-option active"><img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/privacitat.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/privacitat.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/privacitat.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</div>
+      </div>
+
+      <!-- Overlay menu (hamburger opens this) -->
+      <ul class="nav-menu" id="nav-menu" role="menu">
+        <li><a href="sobre.html" class="nav-link" role="menuitem">Qui som</a></li>
+        <li><a href="serveis.html" class="nav-link" role="menuitem">Serveis 73</a></li>
+        <li><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li><a href="b2b.html" class="nav-link" role="menuitem">B2B</a></li>
+        <!-- Mobile-only items (hidden on desktop via CSS) -->
+        <li><a href="contacte.html" class="nav-contacte-mobile" role="menuitem">Contacte</a></li>
+        <li><a href="reservar.html" class="nav-cta" role="menuitem">Reserva cita</a></li>
+        <li class="nav-menu-lang-wrap">
+          <li class="lang-dropdown-container">
+  <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> <span style="margin:0 0.3rem;">CA</span> <span style="font-size:0.7em;">▼</span>
+  </button>
+  <ul class="lang-menu">
+    <li><a href="/privacitat.html" class="lang-option active"><img src="assets/cat-flag.svg" alt="CA" style="width:1.2em;height:auto;border-radius:2px;vertical-align:middle;"> Català</a></li>
+    <li><a href="/es/privacitat.html" class="lang-option"><span style="font-size:1.2em;">🇪🇸</span> Castellano</a></li>
+    <li><a href="/en/privacitat.html" class="lang-option"><span style="font-size:1.2em;">🇬🇧</span> English</a></li>
+    <li><a href="/fr/privacitat.html" class="lang-option"><span style="font-size:1.2em;">🇫🇷</span> Français</a></li>
+  </ul>
+</li>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Política de Privacitat</h1>
+        <p>Tractament de dades personals conforme al RGPD (UE) 2016/679 i la LOPDGDD.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="legal-body">
+
+        <p class="legal-update">📅 Darrera actualització: Gener 2025 · Versió 1.0</p>
+
+        <div class="legal-toc">
+          <h3>Índex</h3>
+          <ol>
+            <li><a href="#responsable">Responsable del tractament</a></li>
+            <li><a href="#dades-recollides">Dades que recollim</a></li>
+            <li><a href="#finalitats">Finalitats i base legal</a></li>
+            <li><a href="#conservacio">Terminis de conservació</a></li>
+            <li><a href="#destinataris">Destinataris i cessions</a></li>
+            <li><a href="#drets">Els teus drets</a></li>
+            <li><a href="#cookies" id="cookies">Política de cookies</a></li>
+            <li><a href="#seguretat">Seguretat</a></li>
+            <li><a href="#avislegal" id="avislegal">Avís legal</a></li>
+            <li><a href="#contacte-privacitat">Contacte</a></li>
+          </ol>
+        </div>
+
+        <!-- 1. RESPONSABLE -->
+        <h2 id="responsable">1. Responsable del tractament</h2>
+        <table>
+          <tr><th>Dada</th><th>Informació</th></tr>
+          <tr><td>Responsable</td><td>Farmàcia Nova 73</td></tr>
+          <tr><td>Adreça</td><td>Carretera Nova, 73 · 08530 La Garriga (Vallès Oriental, Catalunya)</td></tr>
+          <tr><td>Email</td><td><a href="mailto:farmanova@farmanova73.cat">farmanova@farmanova73.cat</a></td></tr>
+          <tr><td>Telèfon</td><td>+34 931 35 21 70</td></tr>
+          <tr><td>Activitat</td><td>Farmàcia i serveis de salut</td></tr>
+          <tr><td>NIF/CIF</td><td>[A completar]</td></tr>
+        </table>
+
+        <!-- 2. DADES -->
+        <h2 id="dades-recollides">2. Dades que recollim</h2>
+        <p>Depenent del servei que sol·licitin, podem recollir les categories següents de dades personals:</p>
+        <ul>
+          <li><strong>Dades identificatives:</strong> nom, cognoms</li>
+          <li><strong>Dades de contacte:</strong> telèfon, adreça electrònica</li>
+          <li><strong>Dades de navegació:</strong> adreça IP, cookies tècniques i analítiques (amb consentiment)</li>
+          <li><strong>Dades de l'empresa</strong> (formularis B2B): nom de l'empresa, CIF, sector, nombre d'empleats</li>
+          <li><strong>Preferències de servei:</strong> tipus de servei sol·licitat, data i hora de preferència</li>
+          <li><strong>Notes clíniques i de salut</strong> (categoria especial): únicament quan la persona les faciliti voluntàriament al camp de comentaris de la reserva</li>
+        </ul>
+        <p><strong>No recollim dades de menors d'edat.</strong> Els nostres serveis estan dirigits a persones majors de 18 anys. Si detectem dades de menors, les eliminarem immediatament.</p>
+
+        <!-- 3. FINALITATS -->
+        <h2 id="finalitats">3. Finalitats del tractament i base legal</h2>
+        <table>
+          <tr>
+            <th>Finalitat</th>
+            <th>Dades tractades</th>
+            <th>Base legal (RGPD)</th>
+          </tr>
+          <tr>
+            <td>Gestió de reserves de cita prèvia</td>
+            <td>Nom, telèfon, email, servei, data/hora</td>
+            <td>Art. 6.1.b — Execució d'un contracte / mesures precontractuals</td>
+          </tr>
+          <tr>
+            <td>Enviament de la guia PDF gratuïta</td>
+            <td>Nom, email</td>
+            <td>Art. 6.1.a — Consentiment de l'interessat</td>
+          </tr>
+          <tr>
+            <td>Newsletter i comunicacions comercials</td>
+            <td>Nom, email</td>
+            <td>Art. 6.1.a — Consentiment explícit i voluntari (opt-in)</td>
+          </tr>
+          <tr>
+            <td>Gestió de consultes B2B</td>
+            <td>Dades empresa, persona de contacte</td>
+            <td>Art. 6.1.b — Mesures precontractuals; Art. 6.1.f — Interès legítim</td>
+          </tr>
+          <tr>
+            <td>Analítica web anònima</td>
+            <td>Dades de navegació anonimitzades</td>
+            <td>Art. 6.1.a — Consentiment (cookie analítica)</td>
+          </tr>
+          <tr>
+            <td>Compliment d'obligacions legals</td>
+            <td>Les necessàries per a cada obligació</td>
+            <td>Art. 6.1.c — Obligació legal</td>
+          </tr>
+        </table>
+
+        <!-- 4. CONSERVACIÓ -->
+        <h2 id="conservacio">4. Terminis de conservació</h2>
+        <table>
+          <tr><th>Tractament</th><th>Termini</th></tr>
+          <tr><td>Reserva de cita (no formalitzada en servei)</td><td>12 mesos des de la sol·licitud</td></tr>
+          <tr><td>Historial de serveis prestats</td><td>5 anys (obligació legal farmacèutica)</td></tr>
+          <tr><td>Newsletter / comunicació comercial</td><td>Fins a baixa voluntària + 12 mesos</td></tr>
+          <tr><td>Consultes B2B</td><td>24 mesos des del darrer contacte</td></tr>
+          <tr><td>Cookies analítiques</td><td>Màxim 13 mesos</td></tr>
+          <tr><td>Dades de navegació (log)</td><td>12 mesos (seguretat informàtica)</td></tr>
+        </table>
+
+        <!-- 5. DESTINATARIS -->
+        <h2 id="destinataris">5. Destinataris i cessions de dades</h2>
+        <p>Les dades no se cediran a tercers, excepte:</p>
+        <ul>
+          <li><strong>Obligació legal:</strong> Administració sanitària, tributària o judicial quan sigui requerit per llei.</li>
+          <li><strong>Encarregats de tractament:</strong> Proveïdors de serveis TIC (allotjament web, servei d'email marketing) que actuen com a encarregats del tractament sota contracte amb garanties RGPD. En el moment de publicació: [Formspree/EmailJS — completar amb proveïdors reals].</li>
+        </ul>
+        <p><strong>No es fan transferències internacionals</strong> de dades fora de l'Espai Econòmic Europeu, excepte si el proveïdor de servei d'email tingués servidors als EUA, cas en el qual s'aplicaran les Clàusules Contractuals Tipus de la Comissió Europea.</p>
+
+        <!-- 6. DRETS -->
+        <h2 id="drets">6. Els teus drets</h2>
+        <p>En virtut del RGPD, tens els drets següents:</p>
+        <ul>
+          <li><strong>Accés:</strong> Saber quines dades tenim sobre tu.</li>
+          <li><strong>Rectificació:</strong> Corregir dades inexactes o incompletes.</li>
+          <li><strong>Supressió («dret a l'oblit»):</strong> Sol·licitar l'eliminació de les dades quan, entre altres motius, no siguin necessàries per a la finalitat per la qual es van recollir.</li>
+          <li><strong>Oposició:</strong> Oposar-te al tractament basat en interès legítim o a rebre comunicacions comercials.</li>
+          <li><strong>Limitació:</strong> Sol·licitar la limitació del tractament en determinades circumstàncies.</li>
+          <li><strong>Portabilitat:</strong> Rebre les teves dades en format estructurat i llegible per màquina.</li>
+          <li><strong>No ser objecte de decisions automatitzades</strong> amb efectes significatius sobre tu.</li>
+          <li><strong>Retirar el consentiment</strong> en qualsevol moment, sense que això afecti la licitud del tractament previ.</li>
+        </ul>
+        <p>Per exercir qualsevol d'aquests drets, adreça't a: <a href="mailto:farmanova@farmanova73.cat"><strong>farmanova@farmanova73.cat</strong></a> o per carta a Ctra. Nova 73, 08530 La Garriga, adjuntant còpia del DNI/NIE.</p>
+        <p>Tindràs resposta en un termini màxim d'<strong>un mes</strong> des de la recepció de la sol·licitud. Si no estàs satisfet/a amb la nostra resposta, tens dret a reclamar davant l'<strong>Agència Espanyola de Protecció de Dades (AEPD)</strong> a <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>.</p>
+
+        <!-- 7. COOKIES -->
+        <h2 id="cookies-section">7. Política de Cookies</h2>
+        <p>Una cookie és un petit fitxer de text que el servidor web emmagatzema al dispositiu de l'usuari. Les cookies ens permeten recordar preferències, analitzar l'ús del lloc web i millorar l'experiència de navegació.</p>
+
+        <h3>Categories de cookies que utilizem</h3>
+        <table>
+          <tr>
+            <th>Tipus</th>
+            <th>Nom</th>
+            <th>Finalitat</th>
+            <th>Durada</th>
+            <th>Consentiment</th>
+          </tr>
+          <tr>
+            <td>Tècnica</td>
+            <td>fn73_cookie_consent</td>
+            <td>Emmagatzema la teva elecció de consentiment de cookies</td>
+            <td>12 mesos</td>
+            <td>No requereix (essencial)</td>
+          </tr>
+          <tr>
+            <td>Analítica</td>
+            <td>_ga, _ga_XXX</td>
+            <td>Google Analytics — Anàlisi anònim de tràfic web</td>
+            <td>13 mesos</td>
+            <td>Requereix consentiment</td>
+          </tr>
+          <tr>
+            <td>Funcional</td>
+            <td>fn73_servei</td>
+            <td>Recorda el servei seleccionat per pre-emplenar formulari</td>
+            <td>Sessió</td>
+            <td>No requereix (tècnica)</td>
+          </tr>
+        </table>
+
+        <h3>Gestió de cookies</h3>
+        <p>Pots gestionar les cookies des del banner que apareix en la teva primera visita. També pots eliminar o bloquejar les cookies des de la configuració del teu navegador:</p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/ca/kb/galetes-informacio-que-els-webs-emmagatzemen" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/ca-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+          <li><a href="https://support.microsoft.com/ca-es/microsoft-edge/eliminar-cookies" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+        </ul>
+
+        <!-- 8. SEGURETAT -->
+        <h2 id="seguretat">8. Seguretat</h2>
+        <p>Hem implementat mesures tècniques i organitzatives per protegir les teves dades contra l'accés no autoritzat, la pèrdua accidental o la destrucció:</p>
+        <ul>
+          <li>Connexió HTTPS amb certificat SSL/TLS</li>
+          <li>Accés restringit a les dades personals al personal autoritzat</li>
+          <li>Còpies de seguretat periòdiques</li>
+          <li>Formació del personal en protecció de dades</li>
+        </ul>
+        <p>En cas de bretxa de seguretat que pogués afectar els teus drets, te'n notificarem en un termini màxim de 72 hores, conforme a l'article 33 del RGPD.</p>
+
+        <!-- 9. AVÍS LEGAL -->
+        <h2 id="avislegal-section">9. Avís Legal</h2>
+        <p><strong>Titular del lloc web:</strong> Farmàcia Nova 73 · NIF: [A completar] · Ctra. Nova 73, 08530 La Garriga.</p>
+        <p>El contingut d'aquest lloc web és de caràcter informatiu i no constitueix assessorament mèdic. Per a qualsevol dubte de salut, consulta un professional sanitari.</p>
+        <p>Queda prohibida la reproducció total o parcial del contingut d'aquest lloc web sense l'autorització expressa de Farmàcia Nova 73.</p>
+        <p>Aquest lloc web es regeix per la legislació espanyola i de la Unió Europea. Qualsevol controvèrsia derivada del seu ús se sotmetrà als Jutjats i Tribunals de la circumscripció de Barcelona.</p>
+
+        <!-- 10. CONTACTE -->
+        <h2 id="contacte-privacitat">10. Contacte en matèria de privacitat</h2>
+        <p>Per a qualsevol consulta relacionada amb el tractament de les teves dades personals o per exercir els teus drets, posa't en contacte amb nosaltres:</p>
+        <ul>
+          <li>📧 Email: <a href="mailto:farmanova@farmanova73.cat">farmanova@farmanova73.cat</a></li>
+          <li>📍 Adreça: Carretera Nova, 73 · 08530 La Garriga</li>
+          <li>📞 Telèfon: +34 931 35 21 70</li>
+        </ul>
+        <p>Farmàcia Nova 73 es reserva el dret a actualitzar aquesta Política de Privacitat. Qualsevol canvi substancial serà notificat als usuaris registrats per email. La data d'actualització es reflecteix al capdamunt d'aquest document.</p>
+
+        <div style="text-align:center;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--color-border);">
+          <a href="index.html" class="btn-primary">← Tornar a l'inici</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:1.5rem 0;">
+        <p>© 2025 Farmàcia Nova 73 · La Garriga · Tots els drets reservats</p>
+        <div class="footer-legal">
+          <a href="privacitat.html">Política de Privacitat</a>
+          <a href="privacitat.html#cookies">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
