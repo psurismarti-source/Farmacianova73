@@ -133,6 +133,24 @@
       menu.classList.toggle('show', !isOpen);
       btn.setAttribute('aria-expanded', String(!isOpen));
     });
+
+    // Ensure language navigation works reliably on mobile browsers.
+    menu.querySelectorAll('a.lang-option[href]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (!href) return;
+
+        // Persist manual choice (so auto-detect doesn't override).
+        if (href.includes('/es/')) localStorage.setItem('user_lang', 'es');
+        else if (href.includes('/en/')) localStorage.setItem('user_lang', 'en');
+        else if (href.includes('/fr/')) localStorage.setItem('user_lang', 'fr');
+        else localStorage.setItem('user_lang', 'ca');
+
+        // Let normal navigation happen, but force it if something interferes.
+        e.preventDefault();
+        window.location.assign(href);
+      }, { passive: false });
+    });
   });
 
   // Close when clicking outside
