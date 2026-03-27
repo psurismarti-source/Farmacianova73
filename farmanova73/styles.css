@@ -278,7 +278,7 @@ address {
   height: 40px;
   padding: 0.5rem;
   flex-shrink: 0;
-  order: 3;       /* mobile: far right */
+  order: 4;       /* mobile: far right (after language) */
   background: none;
   border: none;
   border-radius: var(--radius-sm);
@@ -335,9 +335,9 @@ address {
   order: 2;
 }
 
-/* ---- Right-side items (desktop only) ---- */
+/* ---- Right-side items ---- */
 .nav-right {
-  display: none;   /* hidden on mobile */
+  display: flex;   /* mobile: show language switcher */
   align-items: center;
   gap: 0.5rem;
   order: 3;
@@ -541,29 +541,15 @@ address {
 
 /* Mobile-only language entry inside hamburger menu */
 @media (max-width: 1023.98px) {
-  /* Header keeps only logo + hamburger on mobile */
-  .nav-right .lang-dropdown-container {
+  /* Header: show only language on the right */
+  .nav-right .nav-contacte-desktop,
+  .nav-right .nav-cta {
     display: none !important;
   }
 
-  /* Lang selector appears as last mobile menu item */
-  .nav-menu .lang-dropdown-container {
-    width: 100%;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-menu .lang-dropdown-container > .lang-btn {
-    width: 100%;
-    justify-content: space-between;
-    padding: 12px 20px;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--color-primary-d);
-    border: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 0;
+  /* Hide lang selector inside the hamburger menu (now in header) */
+  .nav-menu-lang-wrap {
+    display: none !important;
   }
 }
 
