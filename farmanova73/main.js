@@ -97,6 +97,54 @@
   });
 })();
 
+// ---- LANG DROPDOWN (tap-friendly, mobile-safe) ----
+(function initLangDropdown() {
+  const containers = Array.from(document.querySelectorAll('.lang-dropdown-container'));
+  if (!containers.length) return;
+
+  function getMenu(container) {
+    return container.querySelector('.lang-menu');
+  }
+
+  function getButton(container) {
+    return container.querySelector('.lang-btn');
+  }
+
+  function closeAll(exceptContainer = null) {
+    containers.forEach((c) => {
+      if (exceptContainer && c === exceptContainer) return;
+      const m = getMenu(c);
+      const b = getButton(c);
+      if (m) m.classList.remove('show');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  containers.forEach((container) => {
+    const btn = getButton(container);
+    const menu = getMenu(container);
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = menu.classList.contains('show');
+      closeAll(container);
+      menu.classList.toggle('show', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', () => closeAll(null));
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    closeAll(null);
+  });
+})();
+
 
 // ---- SCROLL ANIMATIONS ----
 (function initAnimations() {
