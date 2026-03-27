@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/farmanova73/:path*", "destination": "/farmanova73/:path*" },
+    { "source": "/", "destination": "/farmanova73/index.html" },
+    { "source": "/:path*", "destination": "/farmanova73/:path*" }
+  ]
+}
+
